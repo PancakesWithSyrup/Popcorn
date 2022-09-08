@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Title Printed in HTML-->
+    <h1 style="padding-top:10px; text-align:center; color:purple"><str>Project PopQorn Seating Diagram</str></h1>
+    <meta charset="UTF-8">
+    <!--Controls the refreshing of HTML-->
+    <meta http-equiv="refresh" content="5">
+    <!--Viewport allows for the page to extend and fit nicely for different screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        <!-- -->
+
+        img {
+            width: 25%;
+            height: auto;
+            }
+
+        table {
+            width: 100%;
+            }
+
+        div.box {
+            text-align: center;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+            width:50%;
+            height:70px;
+            border:1px solid #000;
+            }
+
+    </style>
+    <title>Project PopQorn Seating Diagram</title>
+</head>
+<body>
+    <!--Space between Title of Page and Diagram-->
+    <br><br>
+     <!--Table element for images-->
+    <div id="compTable">
+        <table id="table">
+            <!--3rd Row-->
+            <tr>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp31" class="comp31"><br>COMP31</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp32" class="comp32"><br>COMP32</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp33" class="comp33"><br>COMP33</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp34" class="comp34"><br>COMP34</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp35" class="comp35"><br>COMP35</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp36" class="comp36"><br>COMP36</th>
+            </tr>
+            <tr>
+                <!--Extra blank rows for space-->
+                <td><br><br><br></td>
+            </tr>
+            <!--2nd Row-->
+            <tr>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp21" class="comp21"><br>COMP21</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp22" class="comp22"><br>COMP22</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp23" class="comp23"><br>COMP23</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp24" class="comp24"><br>COMP24</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp25" class="comp25"><br>COMP25</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp26" class="comp26"><br>COMP26</th>
+            </tr>
+
+             <tr>
+                 <!--Extra blank rows for space-->
+                <td><br><br><br></td>
+            </tr>
+            <!--1st Row-->
+            <tr>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp11" class="comp11"><br>COMP11</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp12" class="comp12"><br>COMP12</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp13" class="comp13"><br>COMP13</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp14" class="comp14"><br>COMP14</th>
+                <th><img src="Green Computer.png" alt="Green Computer" id="comp15" class="comp15"><br>COMP15</th>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!--Space Between Table of Images and Black Box-->
+    <br><br>
+
+    <!-- Black Box with Front of Class typed in it in white-->
+    <div class="box"><h2 style="color: white; text-align: center">FRONT OF CLASS</h2></div>
+
+
+</body>
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>This diagram was last updated: <span id="time"> </span>, <span id="date"></span><br>**Page should refresh every 5 seconds.**</str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        <!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+    </script>
+
+
+</footer>
+</html>
