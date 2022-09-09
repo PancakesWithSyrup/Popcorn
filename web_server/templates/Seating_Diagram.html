@@ -93,16 +93,16 @@
 
     <!--Time Stamp Script, there are different methods available for how to display the time-->
     <script>
-        <!--Method for Local Time-->
+        <!-- Method for local time -->
         var datetime = new Date().toLocaleTimeString();
 
-        <!--Method for Current Date-->
+        // Method for current date
         var currentDate = new Date().toDateString();
 
-        <!--Logs into Console for verification-->
+        // Logs into console for verification
         console.log(datetime);
 
-        <!--Method to display on HTML-->
+        // Method to display
         document.getElementById("time").textContent=datetime;
         document.getElementById("date").textContent=currentDate;
     </script>
