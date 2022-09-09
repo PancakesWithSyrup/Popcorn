@@ -18,7 +18,7 @@ def hello():
     comp34_occupied = False
     comp35_occupied = True
     comp36_occupied = False
-    return render_template('index.html', comp12_occupied = comp12_occupied, comp13_occupied = comp13_occupied, comp14_occupied = comp14_occupied,
+    return render_template('Seating_Diagram.html', comp12_occupied = comp12_occupied, comp13_occupied = comp13_occupied, comp14_occupied = comp14_occupied,
                                         comp21_occupied = comp21_occupied, comp22_occupied = comp22_occupied, comp23_occupied = comp23_occupied,
                                         comp24_occupied = comp24_occupied, comp25_occupied = comp25_occupied, comp31_occupied = comp31_occupied,
                                         comp32_occupied = comp32_occupied, comp33_occupied = comp33_occupied, comp34_occupied = comp34_occupied,
