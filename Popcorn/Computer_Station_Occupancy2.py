@@ -14,8 +14,7 @@ def findPeople(img) -> bool:
     for count in contours:
         epsilon = 0.01*cv2.arcLength(count, True)
         approximations = cv2.approxPolyDP(count, epsilon, True)
-        cv2.drawContours(blurredImage, [approximations], 0, 0, 3)
-        i, j = approximations[0][0]
+        cv2.drawContours(blurredImage, approximations, 0, 0, 3)
         # if statement to determine if Occupied or Vacant
         if len(approximations) <= 4:
             occupied = True
