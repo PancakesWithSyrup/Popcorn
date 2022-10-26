@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Project PopQorn Host Reserve Space</title>
+	<link rel="stylesheet" href="Project_PopQorn_HostGUI.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<style>
+		button {
+			font-size: 23px;
+			text-align: center;
+		}
+		legend {
+			font-size: 35px;
+			
+		}
+		table {
+			border: 1px solid black;
+			width: 50%;
+			border-collapse: collapse;
+			
+		}
+		td {
+			border: 1px solid black;
+			height: 40px;
+			border-collapse: collapse;
+		}
+		
+		label {
+			font-size: 40px;
+			
+		}
+		p, span, str, h3 {
+			color: orange;
+		}
+		
+	</style>
+	
+	<script>
+		function saveSettings() {
+		
+		}
+		
+		function cancelSettings() {
+			window.open("Project_PopQorn_HostGUI.html");
+			window.close();
+		}
+	</script>
+</head>
+<body>
+	<p style="color: purple; font-size: 40px; text-align: center">Project PopQorn</p>
+	<p style="color: white; font-size: 36px; text-align: center">Welcome to Host Reserve Space</p>
+	<form>
+		<fieldset>
+			<legend>Reserve the Following Spaces:</legend>
+				<table>
+					<tr>
+						<td><input type="checkbox" id="space" name="space" value="e1">
+							<label for="space" >E1</label></td>
+						<td><input type="checkbox" id="space" name="space" value="e2">
+							<label for="space" >E2</label></td>
+						<td><input type="checkbox" id="space" name="space" value="e3">
+							<label for="space">E3</label></td>
+						<td><input type="checkbox" id="space" name="space" value="e4">
+							<label for="space">E4</label></td>
+						<td><input type="checkbox" id="space" name="space" value="e5">
+							<label for="space">E5</label></td>
+						<td><input type="checkbox" id="space" name="space" value="e6">
+							<label for="space" >E6</label></td>
+					</tr>
+				<br>
+					<tr>
+						<td><input type="checkbox" id="space" name="space" value="d1">
+							<label for="space" >D1</label></td>
+						<td><input type="checkbox" id="space" name="space" value="d2">
+							<label for="space" >D2</label></td>
+						<td><input type="checkbox" id="space" name="space" value="d3">
+							<label for="space" >D3</label></td>
+						<td><input type="checkbox" id="space" name="space" value="d4">
+							<label for="space" >D4</label></td>
+						<td><input type="checkbox" id="space" name="space" value="d5">
+							<label for="space" >D5</label></td>
+						<td><input type="checkbox" id="space" name="space" value="d6">
+							<label for="space" >D6</label></td>
+					</tr>
+				<br>
+					<tr>
+						<td><input type="checkbox" id="space" name="space" value="c1">
+							<label for="space" >C1</label></td>
+						<td><input type="checkbox" id="space" name="space" value="c2">
+							<label for="space" >C2</label></td>
+						<td><input type="checkbox" id="space" name="space" value="c3">
+							<label for="space" >C3</label></td>
+						<td><input type="checkbox" id="space" name="space" value="c4">
+							<label for="space" >C4</label></td>
+						<td><input type="checkbox" id="space" name="space" value="c5">
+							<label for="space" >C5</label></td>
+						<td><input type="checkbox" id="space" name="space" value="c6">
+							<label for="space" >C6</label></td>
+					</tr>
+				<br>
+					<tr>
+						<td><input type="checkbox" id="space" name="space" value="b1">
+							<label for="space" >B1</label></td>
+						<td><input type="checkbox" id="space" name="space" value="b2">
+							<label for="space" >B2</label></td>
+						<td><input type="checkbox" id="space" name="space" value="b3">
+							<label for="space" >B3</label></td>
+						<td><input type="checkbox" id="space" name="space" value="b4">
+							<label for="space" >B4</label></td>
+						<td><input type="checkbox" id="space" name="space" value="b5">
+							<label for="space" >B5</label></td>
+						<td><input type="checkbox" id="space" name="space" value="b6">
+							<label for="space" >B6</label></td>
+					</tr>
+				<br>
+					<tr>
+						<td><input type="checkbox" id="space" name="space" value="a1">
+							<label for="space" >A1</label></td>
+						<td><input type="checkbox" id="space" name="space" value="a2">
+							<label for="space" >A2</label></td>
+						<td><input type="checkbox" id="space" name="space" value="a3">
+							<label for="space" >A3</label></td>
+						<td><input type="checkbox" id="space" name="space" value="a4">
+							<label for="space" >A4</label></td>
+						<td><input type="checkbox" id="space" name="space" value="a5">
+							<label for="space" >A5</label></td>
+						<td><input type="checkbox" id="space" name="space" value="a6">
+							<label for="space" >A6</label></td>
+					</tr>
+			</table>
+		<br><br>
+		<button onclick="saveSettings();"> Save Settings</button>
+		<button onclick="cancelSettings();"> Cancel Settings</button>
+	</fieldset>
+	</form>
+	
+	
+	
+	<br>
+	
+	
+</body>
+
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>The current time is: <span id="time"> </span>, <span id="date"></span></str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        function getTime(){
+		<!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+		}
+		getTime();
+		setInterval(getTime, 1000);
+    </script>
+</footer>
+</html>

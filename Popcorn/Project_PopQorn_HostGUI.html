@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Project PopQorn Host GUI</title>
+	<link rel="stylesheet" href="Project_PopQorn_HostGUI.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<style>
+		span {
+			color: orange;
+			font-size: 23px;
+		}
+		form, label, select {
+			font-size: 25px;
+		}
+		
+	</style>
+</head>
+<body>
+	<p style="color: purple; font-size: 40px; text-align: center">Project PopQorn</p>
+	<p style="color: white; font-size: 36px; text-align: center">Welcome to Host Settings</p>
+	
+	<a style="font-size: 26px; text-align: center;" href="Project_PopQorn_HostAdditionalSettings.html">Additional Settings</a><br><br>
+	<a style="font-size: 26px; text-align: center" href="Project_PopQorn_HostReserveSpace.html">Reserve Space</a><br><br>
+	<a style="font-size: 26px; text-align: center" href="Project_PopQorn_HostAdjustTimeSetting.html">Adjust Time Setting</a><br><br>
+	<br><br><br><br><br>
+	
+	<script>
+		function openTermProg() {
+			window.open("Project_PopQorn_HostTerminate.html");
+			
+		}
+	
+	</script>
+	<form>
+		<label for="room" style="font-size: 26px">Choose a Room:</label>
+			<select id="room" name="room">
+				<option value="OXA1202">OXA1202</option>
+				<option value="OXA1237B">OXA1237B</option>
+				<option value="OXC3202">OXC3202</option>
+				
+			</select>
+			<br><br>
+			<label for="webCam" style="font-size: 26px">Choose a Web Cam Number :</label>
+			<select id="room" name="room">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				
+				
+			</select>
+	</form>
+	<br>
+	<button type="button" onclick="executeSpaceOccupancy();" style="font-size: 32px; text-align: center"> Execute Space Occupancy</button>
+	<br>
+	<span>**If the Space Occupancy program is already running, please terminate and execute again if settings are changed.** 
+	<br><br>
+	<button type="button" style="font-size: 26px; text-align: center" onclick="openTermProg();">Terminate Space Occupancy Detection</button>
+</body>
+
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>The current time is: <span id="time"> </span>, <span id="date"></span></str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        function getTime(){
+		<!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+		}
+		getTime();
+		setInterval(getTime, 1000);
+		
+		function executeSpaceOccupancy() {
+			window.open("Space_Diagram_E6.html");
+		}
+    </script>
+</footer>
+</html>

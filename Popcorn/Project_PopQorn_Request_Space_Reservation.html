@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Project PopQorn Request Space Reservation</title>
+	<link rel="stylesheet" href="Project_PopQorn_HostGUI.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend style="font-size: 36px">Request for Space Reservation</legend>
+				<label for="room" style="font-size: 26px">Choose a Room:</label>
+				<select id="room" name="room">
+					<option value="AOX1234">AOX1234</option>
+					<option value="BOX5678">BOX5678</option>
+					<option value="ADI4321">ADI4321</option>
+					<option value="BDI9876">BDI9876</option>
+				</select>
+				<br>
+				<br>
+			
+				<label for="space" style="font-size: 26px">Choose a Space:</label>
+				<select id="space" name="space">
+					<option value="COMP33">COMP33</option>
+					<option value="COMP11">COMP11</option>
+					<option value="COMP12">COMP12</option>
+					<option value="COMP32">COMP32</option>
+					<option value="COMP31">COMP31</option>
+				</select>
+				<br><br>
+	
+				<label style="font-size: 26px" for="email">Enter your email address:</label>
+				<input type="text" id="email" name="email"><br>
+				
+	
+		<br><br>
+		<button onclick="document.location='reserve_space.html'" style="font-size: 32px; text-align: center">Send Request</button>
+	</fieldset>
+	</form>
+</body>
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>The current time is: <span id="time"> </span>, <span id="date"></span></str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        function getTime(){
+		<!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+		}
+		getTime();
+		setInterval(getTime, 1000);
+    </script>
+</footer>
+</html>

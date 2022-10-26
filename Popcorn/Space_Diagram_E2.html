@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Title Printed in HTML-->
+    <h1 style="padding-top:10px; text-align:center; color:purple"><str>Space Diagram E2</str></h1>
+    <meta charset="UTF-8">
+    <!--Controls the refreshing of HTML-->
+    <meta http-equiv="refresh" content="5">
+    <!--Viewport allows for the page to extend and fit nicely for different screen sizes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        <!-- -->
+
+        img {
+            width: auto;
+            height: auto;
+            }
+
+        table {
+            margin: 0;
+			width: 100%;
+			border: 1px solid black;
+            }
+		
+		td,th {
+			height: 103px;
+			border: 1px solid black;
+			}
+			
+        div.box {
+            text-align: center;
+			vertical-align: middle;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+            width:50%;
+            height:70px;
+            border:1px solid #000;
+            }
+
+    </style>
+
+    <title>Space Diagram E2</title>
+</head>
+<body>
+    <!--Space between Title of Page and Diagram-->
+    <br><br>
+     <!--Table element for images-->
+    <div id="compTable">
+        <table id="table">
+		
+            <!--E Row-->
+			<tr>
+                <th><div id="e1";></div><h3></h3></th>
+                <th><div id="e2";></div><h3></h3></th>
+                
+            </tr>
+			<!--D Row-->
+			<tr>
+                <td><div id="d1";></div><h3></h3></th>
+                <td><div id="d2";></div><h3></h3></th>
+                
+            </tr>
+			<!--C Row-->
+            <tr>
+                <td><div id="c1";></div><h3></h3></th>
+                <td><div id="c2";></div><h3></h3></th>
+                
+            </tr>
+            <!--B Row-->
+            <tr>
+                <td><div id="b1";></div><h3></h3></th>
+                <td><div id="b2";></div><h3></h3></th>
+                
+            </tr>
+            <!--A Row-->
+            <tr>
+                <td><div id="a1";></div><h3></h3></th>
+                <td><div id="a2";></div><h3></h3></th>
+                
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!--Space Between Table of Images and Black Box-->
+    <br><br>
+
+    <!-- Black Box with Front of Class typed in it in white-->
+    <div class="box"><h2 style="color: white; text-align: center">FRONT OF ROOM</h2></div>
+
+</body>
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>This diagram was last updated: <span id="time"> </span>, <span id="date"></span><br>**Page should refresh every 5 seconds.**</str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        <!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+    </script>
+
+
+</footer>
+</html>

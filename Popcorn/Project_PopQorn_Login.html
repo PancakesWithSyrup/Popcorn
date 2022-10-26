@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Project PopQorn Login</title>
+	<link rel="stylesheet" href="Project_PopQorn_Login.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<h1 style="color: orange">Welcome to Project PopQorn</h1>
+	<h4 style="color: gold">Please Enter Your Username and Password</h4>
+	<form action="{{url_for("gfg")}}" method="post">
+		<fieldset>
+			<legend style="text-align: center">Login Information</legend>
+				<label for="username" style="text-align: center" >Username:</label>
+				<input type="text" id="username" name="username" style="text-align: center">
+				<br>
+				<label for="password" style="text-align: center">Password:</label>
+				<input type="password" id="password" name="password" style="text-align: center">
+				<br>
+				
+		<input type="submit" value="Send">
+		<input type="reset">
+		</form>
+</body>
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>The current time is: <span id="time"> </span>, <span id="date"></span></str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        function getTime(){
+		<!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+		}
+		getTime();
+		setInterval(getTime, 1000);
+    </script>
+</footer>
+</html>

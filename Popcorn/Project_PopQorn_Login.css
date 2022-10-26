@@ -1,0 +1,25 @@
+form {
+	background-color: teal;
+}
+
+body {
+	background-color: grey;
+}
+
+fieldset {
+	font-family: times new roman;
+}
+
+legend {
+	font-size: 20px;
+	color: white;
+}
+
+label {
+  color: darkblue;
+  
+}
+
+input {
+	background-color: lightblue;
+}

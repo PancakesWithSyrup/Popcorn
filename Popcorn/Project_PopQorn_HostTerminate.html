@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Project PopQorn Host Terminate</title>
+	<link rel="stylesheet" href="Project_PopQorn_HostGUI.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<style>
+		button {
+			font-size: 23px;
+			text-align: center;
+		}
+		body {
+			text-align: center;
+		}
+		span, h3 {
+			color: orange;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	
+	
+	<p style="color: purple; font-size: 40px; text-align: center">Project PopQorn</p>
+	<p style="color: white; font-size: 36px; text-align: center">Would you like to terminate the Space Occupancy Detection?</p>
+	
+	
+	
+	
+	<br>
+	<button type="button" onclick="closeWindow();"> Yes</button>
+	<button type="button" onclick="cancelSettings();"> No</button>
+	
+	<script>
+		function closeWindow() {
+				window.close();
+			}
+	</script>
+	
+</body>
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>The current time is: <span id="time"> </span>, <span id="date"></span></str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        function getTime(){
+		<!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+		}
+		getTime();
+		setInterval(getTime, 1000);
+    </script>
+</footer>
+</html>

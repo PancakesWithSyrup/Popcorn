@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>Project PopQorn Host Adjust Time Setting</title>
+	<link rel="stylesheet" href="Project_PopQorn_HostGUI.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<style>
+		button {
+			font-size: 23px;
+			text-align: center;
+		}
+		legend {
+			font-size: 30px;
+		}
+		option, label, select {
+			font-size: 28px;
+		}
+		
+		p {
+			color: orange;
+			font-size: 23px;
+		}
+		span, h3 {
+			color: orange;
+		}
+		
+	</style>
+	
+	<script>
+		function saveSettings() {
+		
+		}
+		
+		function cancelSettings() {
+			window.open("Project_PopQorn_HostGUI.html");
+			window.close();
+		}
+	</script>
+	
+</head>
+<body>
+	<p style="color: purple; font-size: 40px; text-align: center">Project PopQorn</p>
+	<p style="color: white; font-size: 36px; text-align: center">Welcome to Host Adjust Time Setting</p>
+	
+	<form>
+		<fieldset>
+			<legend>How long would you like to run Occupancy Detection?</legend>
+			<p>**Default time will be 2 hours**</p>
+			<label for="timerSetting" style="font-size: 26px">Please select a timer amount: </label>
+			<select id="timerSetting" name="timerSetting">
+				<option value="15">0 Hour : 15 Minutes</option>
+				<option value="30">0 Hour : 30 Minutes</option>
+				<option value="45">0 Hour : 45 Minutes</option>
+				<option value="60">1 Hour : 00 Minutes</option>
+				<option value="75">1 Hour : 15 Minutes</option>
+				<option value="90">1 Hour : 30 Minutes</option>
+				<option value="105">1 Hour : 45 Minutes</option>
+				<option value="120">2 Hours : 00 Minutes</option>
+				<option value="135">2 Hours : 15 Minutes</option>
+				<option value="150">2 Hours : 30 Minutes</option>
+				<option value="165">2 Hours : 45 Minutes</option>
+				<option value="180">3 Hours : 00 Minutes</option>
+				<option value="195">3 Hours : 15 Minutes</option>
+				<option value="210">3 Hours : 30 Minutes</option>
+				<option value="225">3 Hours : 45 Minutes</option>
+				<option value="240">4 Hours : 00 Minutes</option>
+		
+			</select>
+		</fieldset>
+		
+	</form>
+	<br>
+	<button type="button" onclick="saveSettings();"> Save Settings</button>
+	<button type="button" onclick="cancelSettings();"> Cancel Settings</button>
+	
+</body>
+<footer>
+    <!--Time Stamp Statement-->
+    <h3><str>The current time is: <span id="time"> </span>, <span id="date"></span></str></h3>
+
+    <!--Time Stamp Script, there are different methods available for how to display the time-->
+    <script>
+        function getTime(){
+		<!--Method for Local Time-->
+        var datetime = new Date().toLocaleTimeString();
+
+        <!--Method for Current Date-->
+        var currentDate = new Date().toDateString();
+
+        <!--Logs into Console for verification-->
+        console.log(datetime);
+
+        <!--Method to display on HTML-->
+        document.getElementById("time").textContent=datetime;
+        document.getElementById("date").textContent=currentDate;
+		}
+		getTime();
+		setInterval(getTime, 1000);
+    </script>
+</footer>
+</html>
