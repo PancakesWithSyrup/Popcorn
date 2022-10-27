@@ -11,20 +11,30 @@
     <style>
         <!-- -->
 
-        img {
-            width: auto;
+         img {
+			width: 12%;
             height: auto;
             }
-
+		
+		body {
+			text-align: center;
+		}
+		
         table {
-            margin: 0;
-			width: 100%;
+			margin-left: auto;
+			margin-right:auto;
+			width: 50%;
+			
 			border: 1px solid black;
+			font-weight: bold;
+			border-collapse: collapse;
             }
 		
 		td,th {
-			height: 103px;
+			text-align: center;
+			height: 80px;
 			border: 1px solid black;
+			border-collapse: collapse;
 			}
 			
         div.box {
@@ -41,43 +51,105 @@
     </style>
 
     <title>Space Diagram E2</title>
+	
+	
 </head>
 <body>
     <!--Space between Title of Page and Diagram-->
-    <br><br>
+    <br>
      <!--Table element for images-->
     <div id="compTable">
         <table id="table">
 		
             <!--E Row-->
 			<tr>
-                <th><div id="e1";></div><h3></h3></th>
-                <th><div id="e2";></div><h3></h3></th>
-                
+                <th><div id="e1"></div>
+				<h3>
+				<div id="e1Red"><img src="Red Computer.png"></div>
+				<div id="e1Green"><img src="Green Computer.png"></div>
+				<div id="e1Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</div>
+				</th>
+                <th><div id="e2"></div>
+				<h3>
+				<div id="e2Red"><img src="Red Computer.png"></div>
+				<div id="e2Green"><img src="Green Computer.png"></div>
+				<div id="e2Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</th>
             </tr>
+			
 			<!--D Row-->
 			<tr>
-                <td><div id="d1";></div><h3></h3></th>
-                <td><div id="d2";></div><h3></h3></th>
-                
+                <td><div id="d1";></div>
+				<h3>
+				<div id="d1Red"><img src="Red Computer.png"></div>
+				<div id="d1Green"><img src="Green Computer.png"></div>
+				<div id="d1Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
+                <td><div id="d2";></div>
+				<h3>
+				<div id="d2Red"><img src="Red Computer.png"></div>
+				<div id="d2Green"><img src="Green Computer.png"></div>
+				<div id="d2Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
             </tr>
+			
 			<!--C Row-->
             <tr>
-                <td><div id="c1";></div><h3></h3></th>
-                <td><div id="c2";></div><h3></h3></th>
-                
+                <td><div id="c1";></div>
+				<h3>
+				<div id="c1Red"><img src="Red Computer.png"></div>
+				<div id="c1Green"><img src="Green Computer.png"></div>
+				<div id="c1Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
+                <td><div id="c2";></div>
+				<h3>
+				<div id="c2Red"><img src="Red Computer.png"></div>
+				<div id="c2Green"><img src="Green Computer.png"></div>
+				<div id="c2Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
             </tr>
+			
             <!--B Row-->
             <tr>
-                <td><div id="b1";></div><h3></h3></th>
-                <td><div id="b2";></div><h3></h3></th>
-                
+                <td><div id="b1";></div>
+				<h3>
+				<div id="b1Red"><img src="Red Computer.png"></div>
+				<div id="b1Green"><img src="Green Computer.png"></div>
+				<div id="b1Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
+                <td><div id="b2";></div>
+				<h3>
+				<div id="b2Red"><img src="Red Computer.png"></div>
+				<div id="b2Green"><img src="Green Computer.png"></div>
+				<div id="b2Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
             </tr>
+			
             <!--A Row-->
             <tr>
-                <td><div id="a1";></div><h3></h3></th>
-                <td><div id="a2";></div><h3></h3></th>
-                
+                <td><div id="a1";></div>
+				<h3>
+				<div id="a1Red"><img src="Red Computer.png"></div>
+				<div id="a1Green"><img src="Green Computer.png"></div>
+				<div id="a1Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
+                <td><div id="a2";></div>
+				<h3>
+				<div id="a2Red"><img src="Red Computer.png"></div>
+				<div id="a2Green"><img src="Green Computer.png"></div>
+				<div id="a2Orange"><img src="Orange Computer.png"></div>
+				</h3>
+				</td>
             </tr>
 
         </table>
@@ -89,7 +161,10 @@
 
     <!-- Black Box with Front of Class typed in it in white-->
     <div class="box"><h2 style="color: white; text-align: center">FRONT OF ROOM</h2></div>
-
+	
+	<!-- Script is run after the elements are created.-->
+	<script src="seatingDiagramE2.js">
+	</script>
 </body>
 <footer>
     <!--Time Stamp Statement-->
@@ -110,7 +185,6 @@
         document.getElementById("time").textContent=datetime;
         document.getElementById("date").textContent=currentDate;
     </script>
-
 
 </footer>
 </html>
